@@ -1,4 +1,3 @@
-package Model;
 
 public class Toy {
     private int id;
@@ -49,12 +48,7 @@ public class Toy {
 
     @Override
     public String toString() {
-        return "Toy{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", count=" + count +
-                ", frequency=" + frequency +
-                '}';
+        return "id=" + id +", name='" + name + '\'' + ", count=" + count + ", frequency=" + frequency;
     }
 }
 
