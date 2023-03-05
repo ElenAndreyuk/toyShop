@@ -21,11 +21,6 @@ public class Giveaway {
     }
 
     public static void getPrize(ArrayList<String> prizeToys, String fileName) {
-//        List<String> lines = new ArrayList<>();
-//        for (Toy i : prizeToys) {
-//            String temp = i.toString();
-//            lines.add(temp);
-//        }
         try (FileWriter writer = new FileWriter(fileName, false)) {
             for (String line : prizeToys) {
                 // запись всей строки
