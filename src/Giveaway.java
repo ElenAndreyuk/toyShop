@@ -1,7 +1,6 @@
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class Giveaway {
@@ -10,7 +9,6 @@ public class Giveaway {
 
     public static Toy giveaway(ArrayList<Toy> allToys) {
         int random = new Random().nextInt(100);
-        System.out.println(random);
         int number = 0;
         for (Toy i : allToys) {
             if (number < random && number + i.getFrequency() >= random) {
@@ -22,14 +20,14 @@ public class Giveaway {
         return null;
     }
 
-    public static void getPrize(ArrayList<Toy> prizeToys, String fileName) {
-        List<String> lines = new ArrayList<>();
-        for (Toy i : prizeToys) {
-            String temp = i.toString();
-            lines.add(temp);
-        }
+    public static void getPrize(ArrayList<String> prizeToys, String fileName) {
+//        List<String> lines = new ArrayList<>();
+//        for (Toy i : prizeToys) {
+//            String temp = i.toString();
+//            lines.add(temp);
+//        }
         try (FileWriter writer = new FileWriter(fileName, false)) {
-            for (String line : lines) {
+            for (String line : prizeToys) {
                 // запись всей строки
                 writer.write(line);
                 // запись по символам
